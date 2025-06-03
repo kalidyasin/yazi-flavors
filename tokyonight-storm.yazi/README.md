@@ -13,7 +13,7 @@
 ## 🎨 Installation
 
 ```sh
-ya pack -a kalidyasin/yazi-flavors:tokyonight-storm
+ya pkg add kalidyasin/yazi-flavors:tokyonight-storm
 ```
 
 ## ⚙️ Usage
