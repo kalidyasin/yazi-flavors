@@ -18,6 +18,7 @@ const VARIANTS = {
 		surface1: "#a8aecb",
 		surface2: "#b7c1e3",
 		surface3: "#cbd9e0",
+		surface4: "#b3b8d1",
 
 		// Primary Palette
 		primary: "#2e7de9",
@@ -71,6 +72,7 @@ const VARIANTS = {
 		primary: "#82aaff",
 		secondary: "#c099ff",
 		tertiary: "#fca7ea",
+		surface4: "#363c58",
 
 		// Accents
 		accent: "#0db9d7",
@@ -113,6 +115,7 @@ const VARIANTS = {
 		surface1: "#3b4261",
 		surface2: "#283457",
 		surface3: "#192b38",
+		surface4: "#343a55",
 
 		// Primary Palette
 		primary: "#7aa2f7",
@@ -160,6 +163,7 @@ const VARIANTS = {
 		surface1: "#3b4261",
 		surface2: "#2e3c64",
 		surface3: "#22374b",
+		surface4: "#363d59",
 
 		// Primary Palette
 		primary: "#7aa2f7",

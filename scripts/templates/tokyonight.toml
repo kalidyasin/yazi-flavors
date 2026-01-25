@@ -2,7 +2,7 @@
 
 # : Manager {{{
 
-[manager]
+[mgr]
 cwd = { fg = "${text_secondary}", italic = true }
 
 # Hovered
@@ -54,13 +54,16 @@ unset_alt   = { fg = "${tertiary}", bg = "${surface1}" }
 # : Status bar {{{
 
 [status]
-separator_open    = ""
-separator_close   = ""
+# separator_open    = ""
+# separator_close   = ""
+overall   = { fg = "${text}", bg = "${background-alt}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
-progress_label  = { fg = "${text_secondary}", bold = true }
-progress_normal = { fg = "${background}" }
-progress_error  = { fg = "${red}" }
+progress_label  = { fg = "${text}", bold = true }
+progress_normal = { fg = "${background}", bg = "${surface}" }
+progress_error  = { fg = "${red}", bg = "${surface}" }
 
 # Permissions
 perm_type  = { fg = "${primary}" }
@@ -95,9 +98,9 @@ selected = { bg = "${surface2}" }
 
 # : Completion {{{
 
-[completion]
+[cmp]
 border   = { fg = "${accent}" }
-active   = { fg = "${text}", bg = "${surface2}" }
+active   = { fg = "${text}", bg = "${surface4}" }
 inactive = { fg = "${text}" }
 
 icon_file    = ""
@@ -173,6 +176,7 @@ icon_info = ""
 [help]
 on      = { fg = "${green}" }
 run     = { fg = "${secondary}" }
+desc    = { fg = "${cyan_light}" }
 hovered = { bg = "${surface}" }
 footer  = { fg = "${text}", bg = "${background}" }
 
@@ -206,6 +210,7 @@ rules = [
 
 	# Fallback
 	{ name = "*/", fg = "${primary}" }
+	{ name = "*", fg = "${text}" }
 ]
 
 # : }}}

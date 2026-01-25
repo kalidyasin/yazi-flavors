@@ -13,7 +13,7 @@
 ## 🎨 Installation
 
 ```sh
-ya pack -a kalidyasin/yazi-flavors:${variant}
+ya pkg add kalidyasin/yazi-flavors:${variant}
 ```
 
 ## ⚙️ Usage

@@ -2,7 +2,7 @@
 
 # : Manager {{{
 
-[manager]
+[mgr]
 cwd = { fg = "#828bb8", italic = true }
 
 # Hovered
@@ -19,11 +19,6 @@ marker_cut      = { fg = "#ff757f", bg = "#ff757f" }
 marker_marked   = { fg = "#c099ff", bg = "#c099ff" }
 marker_selected = { fg = "#82aaff", bg = "#82aaff" }
 
-# Tab
-tab_active   = { fg = "#c8d3f5", bg = "#2f334d" }
-tab_inactive = { fg = "#3b4261", bg = "#222436" }
-tab_width    = 1
-
 # Count
 count_copied   = { fg = "#c8d3f5", bg = "#41a6b5" }
 count_cut      = { fg = "#c8d3f5", bg = "#c53b53" }
@@ -33,14 +28,10 @@ count_selected = { fg = "#c8d3f5", bg = "#3e68d7" }
 border_symbol = "│"
 border_style  = { fg = "#589ed7" }
 
-# : }}}
-
-
-# : Tab {{{
-
+# Tab
 [tabs]
-active   = { fg = "#c8d3f5", bg = "#2f334d" }
-inactive = { fg = "#3b4261", bg = "#222436" }
+active   = { fg = "#1b1d2b", bg = "#82aaff" }
+inactive = { fg = "#82aaff", bg = "#3b4261" }
 
 # : }}}
 
@@ -63,13 +54,16 @@ unset_alt   = { fg = "#fca7ea", bg = "#3b4261" }
 # : Status bar {{{
 
 [status]
-separator_open    = ""
-separator_close   = ""
+# separator_open    = ""
+# separator_close   = ""
+overall   = { fg = "#c8d3f5", bg = "${background-alt}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
-progress_label  = { fg = "#828bb8", bold = true }
-progress_normal = { fg = "#222436" }
-progress_error  = { fg = "#ff757f" }
+progress_label  = { fg = "#c8d3f5", bold = true }
+progress_normal = { fg = "#222436", bg = "#2f334d" }
+progress_error  = { fg = "#ff757f", bg = "#2f334d" }
 
 # Permissions
 perm_type  = { fg = "#82aaff" }
@@ -104,9 +98,9 @@ selected = { bg = "#2d3f76" }
 
 # : Completion {{{
 
-[completion]
+[cmp]
 border   = { fg = "#0db9d7" }
-active   = { fg = "#c8d3f5", bg = "#2d3f76" }
+active   = { fg = "#c8d3f5", bg = "#363c58" }
 inactive = { fg = "#c8d3f5" }
 
 icon_file    = ""
@@ -182,6 +176,7 @@ icon_info = ""
 [help]
 on      = { fg = "#c3e88d" }
 run     = { fg = "#c099ff" }
+desc    = { fg = "#86e1fc" }
 hovered = { bg = "#2f334d" }
 footer  = { fg = "#c8d3f5", bg = "#222436" }
 
@@ -215,6 +210,7 @@ rules = [
 
 	# Fallback
 	{ name = "*/", fg = "#82aaff" }
+	{ name = "*", fg = "#c8d3f5" }
 ]
 
 # : }}}
