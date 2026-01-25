@@ -19,11 +19,6 @@ marker_cut      = { fg = "${red}", bg = "${red}" }
 marker_marked   = { fg = "${secondary}", bg = "${secondary}" }
 marker_selected = { fg = "${primary}", bg = "${primary}" }
 
-# Tab
-tab_active   = { fg = "${text}", bg = "${surface}" }
-tab_inactive = { fg = "${onSurface1}", bg = "${background}" }
-tab_width    = 1
-
 # Count
 count_copied   = { fg = "${text}", bg = "${cyan}" }
 count_cut      = { fg = "${text}", bg = "${red_dark}" }
@@ -32,6 +27,11 @@ count_selected = { fg = "${text}", bg = "${blue_dark}" }
 # Border
 border_symbol = "│"
 border_style  = { fg = "${border_accent}" }
+
+# Tab
+[tabs]
+active   = { fg = "${text_inverted}", bg = "${primary}" }
+inactive = { fg = "${primary}", bg = "${surface1}" }
 
 # : }}}
 
