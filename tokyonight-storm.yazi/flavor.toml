@@ -54,11 +54,11 @@ unset_alt   = { fg = "#9d7cd8", bg = "#3b4261" }
 # : Status bar {{{
 
 [status]
-# separator_open    = ""
-# separator_close   = ""
 overall   = { fg = "#c0caf5", bg = "#1f2335" }
-sep_left  = { open = "", close = "" }
-sep_right = { open = "", close = "" }
+separator_open    = ""
+separator_close   = ""
+# sep_left  = { open = "", close = "" }
+# sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#c0caf5", bold = true }
