@@ -56,7 +56,7 @@ unset_alt   = { fg = "#7847bd", bg = "#a8aecb" }
 [status]
 # separator_open    = ""
 # separator_close   = ""
-overall   = { fg = "#3760bf", bg = "${background-alt}" }
+overall   = { fg = "#3760bf", bg = "#d0d5e3" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
