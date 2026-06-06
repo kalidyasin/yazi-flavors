@@ -205,12 +205,12 @@ rules = [
 	# { mime = "inode/x-empty", fg = "${red}" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "${red}" },
-	{ name = "*", is = "exec"  , fg = "${green}" },
+	{ url = "*", is = "orphan", bg = "${red}" },
+	{ url = "*", is = "exec"  , fg = "${green}" },
 
 	# Fallback
-	{ name = "*/", fg = "${primary}" },
-	{ name = "*", fg = "${text}" }
+	{ url = "*/", fg = "${primary}" },
+	{ url = "*", fg = "${text}" }
 ]
 
 # : }}}
