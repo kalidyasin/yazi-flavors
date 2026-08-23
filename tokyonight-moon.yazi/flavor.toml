@@ -5,10 +5,6 @@
 [mgr]
 cwd = { fg = "#828bb8", italic = true }
 
-# Hovered
-hovered         = { bg = "#2f334d" }
-preview_hovered = { bg = "#2f334d" }
-
 # Find
 find_keyword  = { fg = "#1e2030", bg = "#ff966c", bold = true }
 find_position = { fg = "#0db9d7", bg = "#203346", bold = true }
@@ -51,14 +47,21 @@ unset_alt   = { fg = "#fca7ea", bg = "#3b4261" }
 # : }}}
 
 
+# : Indicator {{{
+
+[indicator]
+current = { bg = "#2f334d" }
+preview = { bg = "#2f334d" }
+
+# : }}}
+
+
 # : Status bar {{{
 
 [status]
 overall   = { fg = "#c8d3f5", bg = "#1e2030" }
-separator_open    = ""
-separator_close   = ""
-# sep_left  = { open = "", close = "" }
-# sep_right = { open = "", close = "" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#c8d3f5", bold = true }
@@ -139,7 +142,7 @@ separator_style = { fg = "#636da6" }
 [confirm]
 border  = { fg = "#0db9d7" }
 title   = { fg = "#589ed7" }
-content = {}
+body    = {}
 list    = {}
 btn_yes = { bg = "#2d3f76" }
 btn_no  = {}
@@ -205,13 +208,12 @@ rules = [
 	# { mime = "inode/x-empty", fg = "#ff757f" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "#ff757f" },
-	{ name = "*", is = "exec"  , fg = "#c3e88d" },
+	{ url = "*", is = "orphan", bg = "#ff757f" },
+	{ url = "*", is = "exec"  , fg = "#c3e88d" },
 
 	# Fallback
-	{ name = "*/", fg = "#82aaff" },
-	{ name = "*", fg = "#c8d3f5" }
+	{ url = "*/", fg = "#82aaff" },
+	{ url = "*", fg = "#c8d3f5" }
 ]
 
 # : }}}
-
