@@ -238,11 +238,39 @@ async function generate() {
 		);
 
 		// tmtheme.xml
-		await writeFile(join(wd, "tmtheme.xml"), await fetch(colors._tmtheme).then(r => r.text()))
+		await writeFile(
+			join(wd, "tmtheme.xml"),
+			await fetchText(colors._tmtheme, join(wd, "tmtheme.xml"))
+		)
 
 		// LICENSE-tmtheme
-		await writeFile(join(wd, "LICENSE-tmtheme"), await fetch(colors._tmthemeLicense).then(r => r.text()))
+		await writeFile(
+			join(wd, "LICENSE-tmtheme"),
+			await fetchText(colors._tmthemeLicense, join(wd, "LICENSE-tmtheme"))
+		)
 	}
 }
 
-generate().catch(console.error);
+async function fetchText(url, fallbackPath) {
+	try {
+		const response = await fetch(url)
+		if (!response.ok) {
+			throw new Error(`HTTP ${response.status} ${response.statusText}`)
+		}
+		return await response.text()
+	} catch (error) {
+		try {
+			console.warn(
+				`Failed to fetch ${url}; using existing ${fallbackPath} instead.`
+			)
+			return await readFile(fallbackPath, "utf8")
+		} catch {
+			throw error
+		}
+	}
+}
+
+generate().catch(error => {
+	console.error(error)
+	process.exitCode = 1
+});
